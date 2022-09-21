@@ -7,6 +7,7 @@ export default function Todo(props) {
     const editFieldRef = useRef(null);
     const editButtonRef = useRef(null);
     const wasEditing = usePrevious(isEditing);
+    const [isImportant, setImportant] = useState(false);
 
     function handleChange(e) {
       setNewName(e.target.value)
@@ -58,7 +59,7 @@ export default function Todo(props) {
               defaultChecked={props.completed}
               onChange={() => props.toggleTaskCompleted(props.id)}
             />
-            <label className="todo-label" htmlFor={props.id}>
+            <label className={isImportant ? "importantButton" : "todo-label"} htmlFor={props.id}>
               {props.name}
             </label>
           </div>
@@ -78,6 +79,16 @@ export default function Todo(props) {
             >
               Delete <span className="visually-hidden">{props.name}</span>
             </button>
+
+            <button
+              type="button"
+              className="btn btn__danger"
+              onClick={()=>setImportant(!isImportant)}
+
+            >
+              Important<span className="visually-hidden">{props.name}</span>
+              </button>
+
           </div>
       </div>
     );

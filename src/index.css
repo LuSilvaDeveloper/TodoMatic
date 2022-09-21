@@ -291,3 +291,9 @@ body {
   opacity: 1;
 }
 
+.importantButton {
+  font-size: 2rem;
+  text-decoration: underline;
+  color: red;
+}
+
