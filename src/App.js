@@ -39,10 +39,7 @@ function App(props) {
     }, [tasks]); // Optimization
 
 
-    function handleClear() {
-        localStorage.clear();
-        setTasks([]);
-    }
+
 
     function addTask(name) {
         const newTask = {id: `todo-${nanoid()}`, name, completed: false};
@@ -118,7 +115,7 @@ function App(props) {
             <h1>TodoMatic</h1>
             <Form
                 addTask={addTask}
-                handleClear={handleClear}
+                setTasks={setTasks}
             />
             <div className="filters btn-group stack-exception">
                 {filterList}

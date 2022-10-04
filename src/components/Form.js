@@ -14,6 +14,11 @@ function Form(props) {
         setName(e.target.value);
     }
 
+    function handleClear() {
+        localStorage.clear();
+        props.setTasks([]);
+    }
+
 
     return (
         <form onSubmit={handleSubmit}>
@@ -38,7 +43,7 @@ function Form(props) {
             <button
                 type="button"
                 className="btn btn__secondary btn__lg"
-                onClick={() => props.handleClear()}
+                onClick={() => handleClear()}
             >
                 Clear All Tasks
             </button>
