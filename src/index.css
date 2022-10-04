@@ -162,8 +162,8 @@ body {
 }
 
 .todoapp {
-  background: rgb(231,226,226);
-  background: linear-gradient(90deg, rgba(231,226,226,0) 0%, rgba(94,93,93,1) 32%, rgba(108,108,108,0.578890931372549) 69%, rgba(0,0,0,0.8646052170868348) 100%);
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 15%, rgba(168,151,247,0.15312062324929976) 30%, rgba(176,173,246,0.20073967086834732) 70%, rgba(255,255,255,0) 85%);
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   position: relative;
